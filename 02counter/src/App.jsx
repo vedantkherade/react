@@ -5,6 +5,7 @@ import "./App.css";
 import Counter from "./Counter";
 import One from "./One";
 import Randomnum from "./Randomnum";
+import CountStep from "./CountStep";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Counter />
       <One />
       <Randomnum />
+      <CountStep/>
     </>
   );
 }
