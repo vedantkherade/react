@@ -20,6 +20,7 @@ function Counter(){
           <h1>Count: {count}</h1>
           <button onClick={addValue}>Increase</button>
           <button onClick={removeValue}>Decrease</button>
+          
     
           <p>{name}</p>
           <button onClick={() => setName("Vedant")}>Change name</button>

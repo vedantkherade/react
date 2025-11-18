@@ -16,6 +16,7 @@ function One() {
             <button onClick={() => setTasks(tasks.filter((task) => task !== "Task 1"))}>Remove task 1</button>
 
             <p>{tasks}</p>
+            
 
             <input
                 type="text"
