@@ -7,6 +7,11 @@ import IncrementDecrement from "./components/IncrementDecrement";
 import FruitList from "./components/FruitList";
 import MiniForm from "./components/MiniForm";
 import CountStep from "./components/CountStep";
+import LightDarkTheme from "./components/LightDarkTheme";
+import ExpenseTracker from "./components/ExpenseTracker";
+import PostReactions from "./components/PostReactions";
+import FontSizeSlider from "./components/FontSizeSlider";
+import RandomNumberList from "./components/RandomNumberList";
 
 function App() {
 
@@ -21,6 +26,11 @@ function App() {
         <IncrementDecrement/>
         <FruitList/>
         <MiniForm/>
+        <LightDarkTheme/>
+        <ExpenseTracker/>
+        <PostReactions/>
+        <FontSizeSlider/>
+        <RandomNumberList/>
       </div>
     </div>
   )
