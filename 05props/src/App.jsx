@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Task1 from "./components/Task1";
+import Parent from "./components/Parent";
 
 export default function App() {
 
@@ -38,6 +39,7 @@ export default function App() {
           <CountStep/>
           <CounterBound/>
           <Scoreboard/>
+          <Parent/>
       </div>
     </div>
   )
