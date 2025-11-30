@@ -9,6 +9,11 @@ import MutipleDependencies from "./components/MutipleDependencies";
 import PreventEffect from "./components/PreventEffect";
 import BackgroundEffect from "./components/BackgroundEffect";
 import FiveCharEffect from "./components/FiveCharEffect";
+import AutoCounter from "./components/AutoCounter";
+import PropsChange from "./components/PropsChange";
+import SelectEffect from "./components/SelectEffect";
+import AgeSalaryEffect from "./components/AgeSalaryEffect";
+import FetchSearchInput from "./components/FetchSearchInput";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -52,6 +57,11 @@ function App() {
          <PreventEffect/>
          <BackgroundEffect/>
          <FiveCharEffect/>
+         <SelectEffect/>
+         <AgeSalaryEffect/>
+         <FetchSearchInput/>
+         <AutoCounter/>
+         <PropsChange/>
       </div>
     </div>
   );
