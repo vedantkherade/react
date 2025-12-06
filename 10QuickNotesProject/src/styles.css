@@ -1,0 +1,98 @@
+/* MAIN WRAPPER */
+#app-container {
+  width: 420px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+#title {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* INPUT SECTION */
+#input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+#quote-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+}
+
+#add-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#add-btn:hover {
+  background: #005fcc;
+}
+
+/* ERROR MESSAGE */
+#error-msg {
+  color: red;
+  font-size: 14px;
+  height: 18px;
+  margin-bottom: 10px;
+}
+
+/* QUOTES LIST */
+#quotes-list {
+  margin-top: 15px;
+}
+
+/* EMPTY STATE */
+#empty-text {
+  text-align: center;
+  color: #777;
+  font-size: 16px;
+}
+
+/* QUOTE CARD */
+.quote-card {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quote-text {
+  font-size: 15px;
+  color: #333;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #e84141;
+}
