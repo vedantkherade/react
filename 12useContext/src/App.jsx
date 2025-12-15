@@ -8,6 +8,18 @@ import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import AuthProvider from "./context/AuthProvider";
 import Dashboard from "./components/Dashboard";
+import LanguageProvider from "./context/LanguageProvider";
+import Greeting from "./components/Greeting";
+import NotificationProvider from "./context/NotificationProvider";
+import NotificationControls from "./components/NotificationControls";
+import NotificationBar from "./components/NotificationBar";
+import CounterProvider from "./context/CounterProvider";
+import CounterDisplay from "./components/CounterDisplay";
+import CounterControls from "./components/CounterControls";
+import CombinedProvider from "./context/CombinedProvider";
+import FontProvider from "./context/FontProvider";
+import LayoutProvider from "./context/LayoutProvider";
+import SettingsPanel from "./components/SettingsPanel";
 
 function App() {
   return (
@@ -23,6 +35,30 @@ function App() {
             <Login />
             <Dashboard />
           </AuthProvider>
+          
+          <LanguageProvider>
+            <Greeting/>
+          </LanguageProvider>
+
+          <NotificationProvider>
+            <NotificationControls/>
+            <NotificationBar/>
+          </NotificationProvider>
+
+          <CounterProvider>
+            <CounterDisplay/>
+            <CounterControls/>
+          </CounterProvider>
+
+          <CombinedProvider>
+            <Home/>
+          </CombinedProvider>
+
+          <FontProvider>
+            <LayoutProvider>
+              <SettingsPanel/>
+            </LayoutProvider>
+          </FontProvider>
         </div>
       </div>
     </>
