@@ -20,6 +20,12 @@ import CombinedProvider from "./context/CombinedProvider";
 import FontProvider from "./context/FontProvider";
 import LayoutProvider from "./context/LayoutProvider";
 import SettingsPanel from "./components/SettingsPanel";
+import FeatureProvider from "./context/FeatureProvider";
+import FeatureStatus from "./components/FeatureStatus";
+import FeatureToggle from "./components/FeatureToggle";
+import SortProvider from "./context/SortProvider";
+import ViewProvider from "./context/ViewProvider";
+import FilterPanel from "./components/FilterPanel";
 
 function App() {
   return (
@@ -59,6 +65,17 @@ function App() {
               <SettingsPanel/>
             </LayoutProvider>
           </FontProvider>
+
+          <FeatureProvider>
+            <FeatureStatus/>
+            <FeatureToggle/>
+          </FeatureProvider>
+
+          <SortProvider>
+            <ViewProvider>
+              <FilterPanel/>
+            </ViewProvider>
+          </SortProvider>
         </div>
       </div>
     </>
