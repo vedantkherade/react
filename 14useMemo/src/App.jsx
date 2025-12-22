@@ -117,6 +117,7 @@ const reportTotal = useMemo(() => {
         </button>
         {showHelp && <p> Username must be at least 5 characters long.</p>}
 
+
         <h2>Assisgnment 2</h2>
         <h2>Total Sales: {reportTotal}</h2>
 
