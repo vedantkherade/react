@@ -1,0 +1,119 @@
+db.inventory.find({
+    price: {$gte: 1000, $lt: 10000}
+})
+
+db.inventory.find().sort({price: -1}).limit(5);
+
+db.sales.find({
+    status: {$in: ["CANCELLED", "PENDING"]}
+})
+
+db.employees.find({
+    department: {$in: ["Engineering", "Design"]}
+})
+
+db.employees.find({
+    isActive: true,
+    salary: {$gt: 50000}
+})
+
+db.employees.find({
+    location: "Mumbai"
+}, {name: 1, salary: 1, location:1, _id:0})
+
+db.employees.find({
+    category: "Electronics"
+}, {itemName: 1, price: 1, quantity: 1, _id:0})
+
+db.sales.find({
+    unitsSold: {$gt: 2},
+    status: "COMPLETED"
+})
+
+db.sales.find({
+    region: "West"
+}, {saleId: 1, totalAmount: 1, status: 1, _id:0})
+
+db.sales.find().sort({totalAmount: -1}).limit(5)
+
+
+db.employees.find({
+    isActive: true,
+    department: {$in: ["Engineering", "QA"]}
+})
+
+db.employees.find({
+    isActive: false,
+    salary: {$gte: 40000, $lte: 70000}
+})
+
+db.employees.find({age: {$gte: 30}},
+{name: 1, department: 1, location: 1, _id:0})
+
+db.inventory.find({
+    $or:[
+        {quantity: 0},
+        {isAvailable: false}
+    ]
+})
+
+db.inventory.find({supplier: ["WoodWorks", "OfficePro"]})
+
+db.inventory.find({price: {$gte: 20000}}, {itemName: 1, price: 1, _id:0}).sort({price: 1})
+
+db.inventory.find().skip(3).limit(10);
+
+db.sales.find({
+    saleDate: {$gt: new Date("2024-02-10"), $lt: new Date("2024-02-20")}
+})
+
+
+db.sales.find({
+    totalAmount: {$gte: 20000},
+    status: "COMPLETED"
+})
+
+db.employees.find({
+    isActive: true,
+    department: {$in: ["Engineering", "Management"]},
+    salary: {$gte: 60000}
+})
+
+db.employees.find({
+    isActive: false,
+    $or: [
+        {department: "HR"},
+        {age: {$gte: 35}}
+    ]
+})
+
+db.employees.find({isActive: true},{name: 1, salary: 1, department: 1, _id: 0}).sort({salary: -1}).limit(5)
+
+db.inventory.find({
+    isAvailable: true,
+    price: {$gt: 5000, $lt: 25000},
+    category: {$ne: ["Accessories"]}
+})
+
+db.inventory.find({
+    quantity: {$lte: 5}
+}, {itemName: 1, quantity: 1, _id:0}).sort({quantity: 1})
+
+db.inventory.find({
+    isAvailable: true
+}).sort({price: -1}).limit(3)
+
+
+db.sales.find({
+    status: "COMPLETED",
+    region: {$in: ["West", "North"]},
+    totalAmount: {$gt: 15000}
+})
+
+db.sales.find({unitsSold: {$gte: 3}},{saleId: 1, region: 1, totalAmount: 1, _id:0}).sort({totalAmount: -1})
+
+db.sales.find({saleDate: -1}).skip(5).limit(5)
+
+db.sales.find({
+    status: {$in: ["PENDING", "CANCELLED"]}
+}).sort({saleDate: -1})
