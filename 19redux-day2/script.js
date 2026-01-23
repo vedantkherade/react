@@ -1,6 +1,14 @@
 const redux = require('redux');
+const redux_logger = require('redux-logger');
+
 const createStore = redux.createStore;
-const combineReducer = redux.combineReducers;;
+const combineReducer = redux.combineReducers;
+
+
+const logger = redux_logger.createLogger();
+
+const applyMiddleware = redux.applyMiddleware;
+
 
 //defining actions
 const BUY_CAKE = 'BUY_CAKE'
@@ -67,11 +75,11 @@ const rootReducer = combineReducer({
 })
 
 //createStore is a method that takes reducer as arg to create store
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(logger));
 // console.log("initialState", initialState);
 
 //subscribe method takes listener(callback) as arg and it will be executed everytime the state changes
-let unsubscribe = store.subscribe(() => console.log(store.getState()));
+// let unsubscribe = store.subscribe(() => console.log(store.getState()));
 
 //dispatching action
 store.dispatch(buyCake(2));
@@ -82,4 +90,4 @@ store.dispatch(buyIcecream(2));
 store.dispatch(buyIcecream(2));
 store.dispatch(buyIcecream(2));
 
-unsubscribe();
+// unsubscribe();
