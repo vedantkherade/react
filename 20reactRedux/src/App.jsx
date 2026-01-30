@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import store from './redux/store'
 import IceCreamContainer from './components/IceCreamContainer'
 import BuyCombo from './components/BuyCombo'
+import Users from './components/Users'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
              <CakeContainer />
              <IceCreamContainer/>
              <BuyCombo/>
+             <Users/>
         </Provider>
         
       </div>
