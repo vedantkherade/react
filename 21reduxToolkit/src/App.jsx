@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import CakeContainer from './components/CakeContainer'
 import IceCreamContainer from './components/IceCreamContainer'
+import UserContainer from './components/UserContainer'
 
 function App() {
  
@@ -13,6 +14,7 @@ function App() {
     <div>
       <CakeContainer />
       <IceCreamContainer/>
+      <UserContainer/>
     </div>
   
     </>
